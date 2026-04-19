@@ -1,249 +1,661 @@
 /*
  * Sudecka Wataha — plugin override styles.
  *
- * Loaded AFTER theme.css and outside any CSS @layer so these rules beat
- * Elementor (or any other plugin) CSS that sits outside cascade layers.
- * theme.css uses Tailwind v4 @layer directives, which means unlayered
- * plugin CSS automatically wins over every layered rule. This file
- * restores the intended look by re-declaring critical properties at
- * normal (unlayered) cascade priority with body.sudecka-wataha scoping.
+ * Loaded AFTER theme.css, outside any CSS @layer.
+ * Uses !important to beat Elementor/plugin CSS regardless of
+ * specificity or load order. Scoped with body.sudecka-wataha.
  */
 
-/* ── Global heading font ── */
+/* ── Global defaults ── */
+body.sudecka-wataha {
+    font-family: "Inter", sans-serif !important;
+    color: #1f2937 !important;
+}
+
 body.sudecka-wataha h1,
 body.sudecka-wataha h2,
 body.sudecka-wataha h3 {
-    font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif !important;
+    color: #111827 !important;
+}
+
+body.sudecka-wataha p,
+body.sudecka-wataha li,
+body.sudecka-wataha span,
+body.sudecka-wataha label {
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha a {
+    color: inherit !important;
+}
+
+/* ── Navigation ── */
+body.sudecka-wataha .sw-nav__bar {
+    background: #1f2937eb !important;
+}
+
+body.sudecka-wataha .sw-nav-link {
+    color: #d1d5db !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.6875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .sw-nav-link:hover {
+    color: #fff !important;
+    background: rgba(225, 29, 72, 0.12) !important;
+}
+
+body.sudecka-wataha .sw-nav-link--active {
+    color: #fda4af !important;
+    background: rgba(190, 18, 60, 0.18) !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-trigger {
+    color: #d1d5db !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.6875rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-trigger:hover,
+body.sudecka-wataha .sw-nav__dropdown--current .sw-nav__dropdown-trigger {
+    color: #fff !important;
+    background: rgba(225, 29, 72, 0.12) !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-trigger.sw-nav-link--active {
+    color: #fda4af !important;
+    background: rgba(190, 18, 60, 0.18) !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-link {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.8125rem !important;
+    text-transform: none !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-link:hover {
+    color: #be123c !important;
+}
+
+body.sudecka-wataha .sw-nav__dropdown-link--active {
+    color: #be123c !important;
+}
+
+@media (min-width: 1280px) {
+    body.sudecka-wataha .sw-nav-link,
+    body.sudecka-wataha .sw-nav__dropdown-trigger {
+        font-size: 0.75rem !important;
+    }
 }
 
 /* ── Hero ── */
 body.sudecka-wataha .hero__title {
-    color: #f2f4f5;
-    font-family: "Cinzel", serif;
-    font-size: clamp(1.75rem, 4vw, 3.75rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    color: #f2f4f5 !important;
+    font-family: "Cinzel", serif !important;
+    font-size: clamp(1.75rem, 4vw, 3.75rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    opacity: 0.98 !important;
+    text-shadow: 0 2px 28px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
 }
 
 body.sudecka-wataha .hero__kicker {
-    color: #a9b2b9;
-    font-size: 0.75rem;
-    font-weight: 300;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
+    color: #a9b2b9 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.35em !important;
+    text-transform: uppercase !important;
+}
+
+@media (min-width: 768px) {
+    body.sudecka-wataha .hero__kicker {
+        letter-spacing: 0.9em !important;
+    }
 }
 
 body.sudecka-wataha .hero__quote {
-    color: #e8ecee;
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.65;
+    color: #e8ecee !important;
+    font-family: "Inter", sans-serif !important;
+    font-style: italic !important;
+    font-weight: 300 !important;
+    line-height: 1.65 !important;
 }
 
 body.sudecka-wataha .hero__quote cite {
-    color: #a9b2b9;
-    font-size: 0.875rem;
-    font-style: normal;
+    color: #a9b2b9 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-style: normal !important;
 }
 
 body.sudecka-wataha .hero__btn {
-    font-family: "Inter", sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 0.75rem 2rem;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    padding: 0.75rem 2rem !important;
+    text-decoration: none !important;
 }
 
 body.sudecka-wataha .hero__btn--outline {
-    color: #f2f4f5;
+    color: #f2f4f5 !important;
+    background: rgba(18, 20, 21, 0.35) !important;
+    border: 1px solid rgba(242, 244, 245, 0.45) !important;
+}
+
+body.sudecka-wataha .hero__btn--outline:hover {
+    color: #fff !important;
+    background: rgba(242, 244, 245, 0.12) !important;
+    border-color: #f2f4f5 !important;
 }
 
 body.sudecka-wataha .hero__btn--fill {
-    color: #fff;
+    color: #fff !important;
+    background: linear-gradient(180deg, #e11d48 0%, #be123c 100%) !important;
+    border: 1px solid rgba(190, 18, 60, 0.35) !important;
 }
 
-/* ── Pack-grid section (shared: "Kim jestesmy" + "Witaj w stadzie") ── */
+body.sudecka-wataha .hero__btn--fill:hover {
+    color: #fff !important;
+    background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%) !important;
+}
+
+body.sudecka-wataha .hero__scroll {
+    color: #f2f4f5 !important;
+}
+
+/* ── Pack-grid section overline / rule / title / lead ── */
 body.sudecka-wataha .pack-grid-section__overline {
-    color: #be123c;
-    font-family: "Inter", sans-serif;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.42em;
-    text-transform: uppercase;
+    color: #be123c !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.42em !important;
+    text-transform: uppercase !important;
 }
 
 body.sudecka-wataha .pack-grid-section__title {
-    color: #111827;
-    font-family: "Cinzel", serif;
-    font-weight: 700;
-    text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.6) !important;
 }
 
 body.sudecka-wataha .pack-grid-section__lead {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .pack-grid-section__rule-mark {
+    color: rgba(190, 18, 60, 0.5) !important;
 }
 
 /* ── Pack cards ── */
+body.sudecka-wataha .pack-card {
+    text-decoration: none !important;
+}
+
 body.sudecka-wataha .pack-card__title {
-    color: #111827;
-    font-family: "Cinzel", serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
 }
 
 body.sudecka-wataha .pack-card:hover .pack-card__title,
 body.sudecka-wataha .pack-card:focus-visible .pack-card__title {
-    color: #be123c;
+    color: #be123c !important;
 }
 
 body.sudecka-wataha .pack-card__desc {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
-    font-size: 0.8125rem;
-    font-weight: 300;
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.8125rem !important;
+    font-weight: 300 !important;
 }
 
 body.sudecka-wataha .pack-card__cta {
-    color: rgba(190, 18, 60, 0.55);
-    font-family: "Inter", sans-serif;
-    font-size: 0.62rem;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
+    color: rgba(190, 18, 60, 0.55) !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
 }
 
 body.sudecka-wataha .pack-card:hover .pack-card__cta,
 body.sudecka-wataha .pack-card:focus-visible .pack-card__cta {
-    color: #e11d48;
+    color: #e11d48 !important;
 }
 
-/* ── Home about ── */
-body.sudecka-wataha .home-about__p {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9375rem;
-    font-weight: 300;
-    line-height: 1.75;
-}
-
-body.sudecka-wataha .home-about__highlights li {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-body.sudecka-wataha .home-about__card-kicker {
-    color: #be123c;
-    font-family: "Inter", sans-serif;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-}
-
-body.sudecka-wataha .home-about__card-text {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
-    font-size: 0.875rem;
-    font-weight: 300;
-}
-
-body.sudecka-wataha .home-about .hero__btn--outline {
-    color: #1f2937;
-    font-family: "Inter", sans-serif;
-}
-
-body.sudecka-wataha .home-about .hero__btn--outline:hover {
-    color: #be123c;
-}
-
-body.sudecka-wataha .home-about .hero__btn--fill {
-    color: #fff;
-    font-family: "Inter", sans-serif;
-}
-
-/* ── KRS band / Contact CTA ── */
-body.sudecka-wataha .krs-band__title {
-    color: #f2f4f7;
-    font-family: "Cinzel", serif;
-}
-
-body.sudecka-wataha .krs-band__text {
-    color: #9ca3af;
-    font-family: "Inter", sans-serif;
-}
-
-body.sudecka-wataha .home-contact-cta__eyebrow {
-    color: rgba(253, 164, 175, 0.95);
-    font-family: "Inter", sans-serif;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-}
-
-body.sudecka-wataha .home-contact-cta__btn {
-    font-family: "Inter", sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-/* ── Map section ── */
-body.sudecka-wataha .sw-map-section__title {
-    color: #111827;
-    font-family: "Cinzel", serif;
-}
-
-body.sudecka-wataha .sw-map-section__lead {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
-}
-
-/* ── Footer ── */
-body.sudecka-wataha .site-footer__krs {
-    color: #1f2937;
-    font-family: "Inter", sans-serif;
-}
-
-body.sudecka-wataha .site-footer__krs-desc {
-    color: #6b7280;
-    font-family: "Inter", sans-serif;
-}
-
-/* ── Inner pages ── */
-body.sudecka-wataha .page-title {
-    color: #111827;
-    font-family: "Cinzel", serif;
-}
-
-body.sudecka-wataha .sw-section h2 {
-    color: #111827;
-    font-family: "Cinzel", serif;
-}
-
-body.sudecka-wataha .sw-section h3 {
-    font-family: "Inter", sans-serif;
-}
-
-body.sudecka-wataha .sw-eyebrow {
-    color: #be123c;
-    font-family: "Inter", sans-serif;
-}
-
-body.sudecka-wataha .sw-lead {
-    color: #4b5563;
-    font-family: "Inter", sans-serif;
+body.sudecka-wataha .pack-card__idx {
+    color: rgba(190, 18, 60, 0.2) !important;
+    font-family: "Cinzel", serif !important;
 }
 
 @media (min-width: 640px) {
     body.sudecka-wataha .pack-card__title {
-        font-size: 1.05rem;
+        font-size: 1.05rem !important;
     }
+}
+
+/* ── Home about section ── */
+body.sudecka-wataha .home-about__p {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.9375rem !important;
+    font-weight: 300 !important;
+    line-height: 1.75 !important;
+}
+
+body.sudecka-wataha .home-about__highlights li {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 300 !important;
+}
+
+body.sudecka-wataha .home-about__card-kicker {
+    color: #be123c !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.28em !important;
+    text-transform: uppercase !important;
+}
+
+body.sudecka-wataha .home-about__card-text {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+}
+
+body.sudecka-wataha .home-about .hero__btn--outline {
+    color: #1f2937 !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(55, 65, 81, 0.22) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+body.sudecka-wataha .home-about .hero__btn--outline:hover {
+    color: #be123c !important;
+    background: rgba(241, 245, 249, 0.95) !important;
+    border-color: rgba(190, 18, 60, 0.35) !important;
+}
+
+body.sudecka-wataha .home-about .hero__btn--fill {
+    color: #fff !important;
+}
+
+/* ── KRS band / Contact CTA ── */
+body.sudecka-wataha .krs-band__title {
+    color: #f2f4f7 !important;
+    font-family: "Cinzel", serif !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2em !important;
+}
+
+@media (min-width: 640px) {
+    body.sudecka-wataha .krs-band__title {
+        font-size: 1.875rem !important;
+    }
+}
+
+body.sudecka-wataha .krs-band__text {
+    color: #9ca3af !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+}
+
+@media (min-width: 640px) {
+    body.sudecka-wataha .krs-band__text {
+        font-size: 1rem !important;
+    }
+}
+
+body.sudecka-wataha .home-contact-cta__eyebrow {
+    color: rgba(253, 164, 175, 0.95) !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase !important;
+}
+
+body.sudecka-wataha .home-contact-cta .krs-band__text {
+    color: rgba(226, 232, 240, 0.9) !important;
+}
+
+body.sudecka-wataha .home-contact-cta__btn {
+    color: #111827 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    background: linear-gradient(#f8fafc 0%, #e2e8f0 100%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .home-contact-cta__btn:hover {
+    color: #be123c !important;
+    background: #fff !important;
+}
+
+/* ── Map section ── */
+body.sudecka-wataha .sw-map-section__title {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+    font-size: clamp(1.15rem, 2.5vw, 1.65rem) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+}
+
+body.sudecka-wataha .sw-map-section__lead {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.9375rem !important;
+    font-weight: 300 !important;
+}
+
+body.sudecka-wataha .sw-map-section__link {
+    color: #be123c !important;
+    font-family: "Inter", sans-serif !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .sw-map-section__link:hover {
+    color: #f43f5e !important;
+}
+
+/* ── Footer ── */
+body.sudecka-wataha .site-footer {
+    background: #e5e7eb !important;
+}
+
+body.sudecka-wataha .site-footer__krs {
+    color: #1f2937 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+}
+
+body.sudecka-wataha .site-footer__krs-desc {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 300 !important;
+}
+
+body.sudecka-wataha .site-footer__note {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .site-footer a {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .site-footer a:hover {
+    color: #be123c !important;
+}
+
+/* ── Inner pages: page shell & headings ── */
+body.sudecka-wataha .page-title {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+    font-size: 1.875rem !important;
+    letter-spacing: 0.05em !important;
+}
+
+body.sudecka-wataha .sw-eyebrow {
+    color: #be123c !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.65rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.35em !important;
+    text-transform: uppercase !important;
+}
+
+body.sudecka-wataha .sw-lead {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 1.08rem !important;
+    font-weight: 300 !important;
+}
+
+/* Section headings (PASJA I SPOŁECZNOŚĆ, NASZA HISTORIA, etc.) */
+body.sudecka-wataha .sw-section h2 {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+}
+
+body.sudecka-wataha .prose-page .sw-section h2 {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+    font-weight: 700 !important;
+}
+
+body.sudecka-wataha .sw-section h3 {
+    color: #1f2937 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .prose-page .sw-section h3 {
+    color: #1f2937 !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+}
+
+body.sudecka-wataha .sw-section p,
+body.sudecka-wataha .sw-section li {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-weight: 300 !important;
+}
+
+body.sudecka-wataha .prose-page h2 {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+}
+
+body.sudecka-wataha .prose-page h3 {
+    color: #be123c !important;
+    font-family: "Cinzel", serif !important;
+}
+
+body.sudecka-wataha .prose-page p,
+body.sudecka-wataha .prose-page li {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+    font-weight: 300 !important;
+}
+
+/* page-inner links */
+body.sudecka-wataha .page-inner a {
+    color: #be123c !important;
+    text-decoration: underline !important;
+}
+
+body.sudecka-wataha .page-inner a:hover {
+    color: #f43f5e !important;
+}
+
+/* ── Section callouts/muted/emphasis ── */
+body.sudecka-wataha .sw-emphasis {
+    color: #be123c !important;
+    font-weight: 600 !important;
+}
+
+body.sudecka-wataha .sw-muted {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-callout {
+    color: #1f2937 !important;
+}
+
+/* ── Media placeholders ── */
+body.sudecka-wataha .sw-media__hint {
+    color: #1f2937 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-media__sub {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ── Contact form ── */
+body.sudecka-wataha .sw-contact-form__intro {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-contact-form__label {
+    color: #1f2937 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-contact-form__input,
+body.sudecka-wataha .sw-contact-form__textarea {
+    color: #111827 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-contact-form__submit {
+    color: #fff !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ── Accordion ── */
+body.sudecka-wataha .sw-accordion summary {
+    color: #111827 !important;
+    font-family: "Cinzel", serif !important;
+}
+
+body.sudecka-wataha .sw-accordion__body {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-accordion__body p,
+body.sudecka-wataha .sw-accordion__body li {
+    color: #4b5563 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ── Permit toggle / Compare / Roadmap ── */
+body.sudecka-wataha .sw-permit-toggle__btn {
+    font-family: "Inter", sans-serif !important;
+    color: #1f2937 !important;
+}
+
+body.sudecka-wataha .sw-permit-toggle__btn.is-active {
+    color: #fff !important;
+}
+
+body.sudecka-wataha .sw-compare__heading {
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-roadmap__tab {
+    font-family: "Inter", sans-serif !important;
+    color: #1f2937 !important;
+}
+
+body.sudecka-wataha .sw-roadmap__tab.is-active {
+    color: #fff !important;
+}
+
+body.sudecka-wataha .sw-roadmap__step-title {
+    color: #111827 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-roadmap__step-note {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ── Timeline ── */
+body.sudecka-wataha .sw-timeline__card h4 {
+    color: #111827 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-timeline__card p {
+    color: #6b7280 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .sw-timeline__switch-btn {
+    font-family: "Inter", sans-serif !important;
+    color: #4b5563 !important;
+}
+
+body.sudecka-wataha .sw-timeline__switch-btn.is-active {
+    color: #fff !important;
+}
+
+/* ── Mobile nav ── */
+body.sudecka-wataha .mobile-nav-toggle {
+    color: #e5e7eb !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+body.sudecka-wataha .mobile-nav-panel__link {
+    color: #a1a1aa !important;
+    font-family: "Inter", sans-serif !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .mobile-nav-panel__link:hover {
+    color: #fda4af !important;
+}
+
+body.sudecka-wataha .mobile-nav-panel__link--active {
+    color: #fda4af !important;
+}
+
+body.sudecka-wataha .mobile-nav-details__summary {
+    color: #d4d4d8 !important;
+    font-family: "Inter", sans-serif !important;
+}
+
+/* ── Reveal animation ── */
+body.sudecka-wataha .reveal {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: opacity 1s ease-out, transform 1s ease-out !important;
+}
+
+body.sudecka-wataha .reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }

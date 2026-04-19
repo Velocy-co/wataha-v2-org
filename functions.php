@@ -14,7 +14,7 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
-define('SUDECKA_WATAHA_VER', '1.0.3');
+define('SUDECKA_WATAHA_VER', '1.0.4');
 
 /**
  * Wersja assetu oparta o mtime pliku, aby przelamywac cache po deployu.
@@ -189,13 +189,6 @@ function sudecka_wataha_assets(): void
         sudecka_wataha_asset_version('/assets/css/theme.css')
     );
 
-    wp_enqueue_style(
-        'sudecka-wataha-overrides',
-        get_template_directory_uri() . '/assets/css/overrides.css',
-        ['sudecka-wataha-theme'],
-        sudecka_wataha_asset_version('/assets/css/overrides.css')
-    );
-
     wp_enqueue_script(
         'sudecka-wataha-theme',
         get_template_directory_uri() . '/assets/js/theme.js',
@@ -205,6 +198,21 @@ function sudecka_wataha_assets(): void
     );
 }
 add_action('wp_enqueue_scripts', 'sudecka_wataha_assets');
+
+/**
+ * Enqueue override CSS at very late priority so it loads AFTER all
+ * plugin styles (Elementor, etc.) in the HTML <head>.
+ */
+function sudecka_wataha_override_styles(): void
+{
+    wp_enqueue_style(
+        'sudecka-wataha-overrides',
+        get_template_directory_uri() . '/assets/css/overrides.css',
+        [],
+        sudecka_wataha_asset_version('/assets/css/overrides.css')
+    );
+}
+add_action('wp_enqueue_scripts', 'sudecka_wataha_override_styles', 9999);
 
 /**
  * Jednorazowy auto-setup: tworzy wymagane strony, ustawia statyczną stronę główną
