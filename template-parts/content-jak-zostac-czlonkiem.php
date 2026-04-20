@@ -31,7 +31,7 @@ $strzelnica_url = 'https://strzelnicasudecka.pl/';
 
     <section class="sw-section sw-section--accent">
         <h2><?php esc_html_e('Dlaczego?', 'sudecka-wataha'); ?></h2>
-        <p><?php esc_html_e('Są tysiące powodów by do nas dołączyć! Znajdź swój i podziel się nim z nami. Przynależność do stowarzyszenia daje Ci wiele możliwości a jedną z nich jest zdobycie uprawnień i umiejętności niezbędnych posiadanie broni. Prawo do posiadania broni nabywa się po spełnieniu kryteriów określonych przez organ administracyjny. Jednym z nich jest przynależność do stowarzyszenia o charakterze kolekcjonerskim lub sportowym. Członkostwo w naszym klubie pozwala spełnić ten warunek.', 'sudecka-wataha'); ?></p>
+        <p><?php esc_html_e('Są tysiące powodów by do nas dołączyć! Znajdź swój i podziel się nim z nami. Przynależność do stowarzyszenia daje Ci wiele możliwości a jedną z nich jest zdobycie uprawnień i umiejętności niezbędnych do posiadania broni. Prawo do posiadania broni nabywa się po spełnieniu kryteriów określonych przez organ administracyjny. Jednym z nich jest przynależność do stowarzyszenia o charakterze kolekcjonerskim lub sportowym. Członkostwo w naszym klubie pozwala spełnić ten warunek.', 'sudecka-wataha'); ?></p>
     </section>
 
     <figure class="sw-media sw-media--landscape" aria-label="<?php esc_attr_e('Miejsce na zdjęcie', 'sudecka-wataha'); ?>">
@@ -67,7 +67,7 @@ $strzelnica_url = 'https://strzelnicasudecka.pl/';
                 (<a href="<?php echo esc_url($oswiadczenie_url); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e('kliknij tutaj aby pobrać', 'sudecka-wataha'); ?></a>).
             </li>
             <li>
-                <?php esc_html_e('Wpłać jednorazowe wpisowe 250 zł (zwolnieni z opłaty są zawodnicy z innych klubów zrzeszonych w PZSS, żołnierze MON oraz funkcjonariusze MSWiA) oraz składkę roczną w wysokości 400 zł plus: 300 zł za każdego kolejnego członka rodziny (mąż, żona, dziecko powyżej 18 roku życia), 50 zł za dzieci poniżej 18 roku życia. Osoby przystępujące do stowarzyszenia po 1 lipca 2025 roku płacą połowę składki członkowskiej za dany rok.', 'sudecka-wataha'); ?>
+                <?php esc_html_e('Wpłać jednorazowe wpisowe 250 zł (zwolnieni z opłaty są zawodnicy z innych klubów zrzeszonych w PZSS, żołnierze MON oraz funkcjonariusze MSWiA) oraz składkę roczną w wysokości 400 zł plus: 200 zł za każdego kolejnego członka rodziny (mąż, żona, dziecko powyżej 18 roku życia), 50 zł za dzieci poniżej 18 roku życia i osoby powyżej 70 r.ż. Osoby przystępujące do stowarzyszenia po 1 lipca 2025 roku płacą połowę składki członkowskiej za dany rok.', 'sudecka-wataha'); ?>
             </li>
             <li>
                 <?php esc_html_e('Dostarcz wydrukowane i podpisane dokumenty (deklaracja oraz oświadczenie) na najbliższe spotkanie Stowarzyszenia lub', 'sudecka-wataha'); ?>
@@ -84,7 +84,7 @@ $strzelnica_url = 'https://strzelnicasudecka.pl/';
             <li><?php esc_html_e('Żeby zostać członkiem Stowarzyszenia Strzelecki Klub Sportowy „Sudecka Wataha” musisz wypełnić deklarację członkowską oraz zaświadczenie o niekaralności.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Opłata wpisowa jest jednorazowa i wynosi 250 zł, natomiast składka członkowska wynosi 400 zł i opłacana jest raz na rok.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Po dokonaniu opłat Zarząd podejmie decyzję o przyjęciu Cię do „Sudeckiej Watahy”.', 'sudecka-wataha'); ?></li>
-            <li><?php esc_html_e('Na Twoją prośbę wystawimy Ci dokumenty niezbędne do złożenia podania o pozwolenie na broń: Statut poświadczony za zgodność oraz Zaświadczenie o przynależności do Stowarzyszenia.', 'sudecka-wataha'); ?></li>
+            <li><?php esc_html_e('Na Twoją prośbę wystawimy Ci dokumenty niezbędne do złożenia podania o pozwolenie na broń: kopię statutu potwierdzoną za zgodność z oryginałem i zaświadczenie o członkostwie w stowarzyszeniu.', 'sudecka-wataha'); ?></li>
         </ol>
     </section>
 

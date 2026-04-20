@@ -4,6 +4,7 @@ if (! defined('ABSPATH')) {
 }
 
 $patent_portal = 'https://patentstrzelecki.eu/';
+$patent_exercises_url = 'https://patentstrzelecki.eu/cwiczenia';
 $kalendarz_url = home_url('/kalendarz/');
 ?>
 <article class="sw-article sw-article--about prose-page page-inner">
@@ -52,6 +53,11 @@ $kalendarz_url = home_url('/kalendarz/');
             <a href="<?php echo esc_url($patent_portal); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e('PatentStrzelecki.eu', 'sudecka-wataha'); ?></a>.
             <?php esc_html_e('Miej jednakże na uwadze, iż pula pytań na prawdziwym egzaminie jest otwarta, tzn. możesz trafić na pytanie, które nie zostało opracowane w wyżej wymienionym kursie. Stąd polecamy zapoznanie się z materiałami źródłowymi. Szkolenia przygotowujące do części praktycznej odbywają się w naszym Klubie min. 4 razy w ciągu roku - informacja o najbliższym szkoleniu na stronie', 'sudecka-wataha'); ?>
             <a href="<?php echo esc_url($kalendarz_url); ?>"><?php esc_html_e('Członkostwo: Kalendarz', 'sudecka-wataha'); ?></a>.
+        </p>
+        <p>
+            <a href="<?php echo esc_url($patent_exercises_url); ?>" class="sw-cta-link sw-cta-link--danger" target="_blank" rel="noopener noreferrer">
+                <?php esc_html_e('Przejdź do ćwiczeń online', 'sudecka-wataha'); ?>
+            </a>
         </p>
     </section>
 

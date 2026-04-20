@@ -55,6 +55,17 @@ body.sudecka-wataha .sw-nav-link--active {
     background: rgba(190, 18, 60, 0.18) !important;
 }
 
+body.sudecka-wataha .sw-nav-link--cta {
+    color: #fff !important;
+    background: linear-gradient(180deg, #e11d48 0%, #be123c 100%) !important;
+    border: 1px solid rgba(190, 18, 60, 0.45) !important;
+}
+
+body.sudecka-wataha .sw-nav-link--cta:hover {
+    color: #fff !important;
+    background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%) !important;
+}
+
 body.sudecka-wataha .sw-nav__dropdown-trigger {
     color: #d1d5db !important;
     font-family: "Inter", sans-serif !important;
@@ -659,6 +670,23 @@ body.sudecka-wataha a.mobile-nav-panel__link--active {
     color: #fda4af !important;
 }
 
+body.sudecka-wataha .mobile-nav-panel__link--cta,
+body.sudecka-wataha a.mobile-nav-panel__link--cta {
+    color: #fff !important;
+    background: linear-gradient(180deg, #e11d48 0%, #be123c 100%) !important;
+    border: 1px solid rgba(190, 18, 60, 0.45) !important;
+    border-radius: 0.5rem !important;
+    margin-top: 0.65rem !important;
+    padding: 0.55rem 0.75rem !important;
+    text-align: center !important;
+}
+
+body.sudecka-wataha .mobile-nav-panel__link--cta:hover,
+body.sudecka-wataha a.mobile-nav-panel__link--cta:hover {
+    color: #fff !important;
+    background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%) !important;
+}
+
 body.sudecka-wataha .mobile-nav-panel__link--sub,
 body.sudecka-wataha a.mobile-nav-panel__link--sub {
     font-size: 0.8125rem !important;
@@ -675,6 +703,33 @@ body.sudecka-wataha .mobile-nav-details__summary {
     font-weight: 600 !important;
     letter-spacing: 0.12em !important;
     text-transform: uppercase !important;
+}
+
+/* ── Generic red CTA links in content ── */
+body.sudecka-wataha .sw-cta-link,
+body.sudecka-wataha .page-inner a.sw-cta-link {
+    display: inline-block !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 0.5rem !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+}
+
+body.sudecka-wataha .sw-cta-link--danger,
+body.sudecka-wataha .page-inner a.sw-cta-link--danger {
+    color: #fff !important;
+    background: linear-gradient(180deg, #e11d48 0%, #be123c 100%) !important;
+    border: 1px solid rgba(190, 18, 60, 0.45) !important;
+}
+
+body.sudecka-wataha .sw-cta-link--danger:hover,
+body.sudecka-wataha .page-inner a.sw-cta-link--danger:hover {
+    color: #fff !important;
+    background: linear-gradient(180deg, #f43f5e 0%, #e11d48 100%) !important;
 }
 
 /* ── Mobile responsive fixes ── */

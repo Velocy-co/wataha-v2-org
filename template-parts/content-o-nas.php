@@ -48,7 +48,7 @@ if (! defined('ABSPATH')) {
 
     <section class="sw-section sw-section--about-activity">
         <h2><?php esc_html_e('Działalność klubu', 'sudecka-wataha'); ?></h2>
-        <p><?php esc_html_e('Jako Klub Strzelecki możemy organizować różnego rodzaju zawody strzeleckie dla osób uprawiających strzelectwo sportowe. Podstawą do występowania o broń do celów sportowych jest członkostwo w klubie strzeleckim oraz posiadanie patentu i licencji zawodniczej PZSS. Działalność naszego klubu jest szeroka, a profil oraz prawa i obowiązki członków zawarte są w Statusie Stowarzyszenia.', 'sudecka-wataha'); ?></p>
+        <p><?php esc_html_e('Jako Klub Strzelecki możemy organizować różnego rodzaju zawody strzeleckie dla osób uprawiających strzelectwo sportowe. Podstawą do wystąpienia o broń do celów sportowych jest członkostwo w klubie strzeleckim oraz posiadanie patentu i licencji zawodniczej PZSS. Działalność naszego klubu jest szeroka, a profil oraz prawa i obowiązki członków zawarte są w Statusie Stowarzyszenia.', 'sudecka-wataha'); ?></p>
         <p><?php esc_html_e('Nasi członkowie wywodzą się z różnych środowisk i mają odmienne zainteresowania. Z pewnością i Ty znajdziesz u nas coś dla siebie…', 'sudecka-wataha'); ?></p>
     </section>
 </article>

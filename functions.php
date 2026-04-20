@@ -38,6 +38,32 @@ function sudecka_wataha_logo_url(): string
 }
 
 /**
+ * Bazowy adres dla plikow favicon.
+ */
+function sudecka_wataha_favicon_base_uri(): string
+{
+    return get_template_directory_uri() . '/assets/favicons';
+}
+
+/**
+ * Rezerwowe favicony, gdy "Ikona witryny" nie jest ustawiona w kokpicie WP.
+ */
+function sudecka_wataha_render_favicons(): void
+{
+    if (has_site_icon()) {
+        return;
+    }
+
+    $base = esc_url(sudecka_wataha_favicon_base_uri());
+    echo '<link rel="apple-touch-icon" sizes="180x180" href="' . $base . '/apple-touch-icon.png">';
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="' . $base . '/favicon-32x32.png">';
+    echo '<link rel="icon" type="image/png" sizes="16x16" href="' . $base . '/favicon-16x16.png">';
+    echo '<link rel="manifest" href="' . $base . '/site.webmanifest">';
+    echo '<meta name="theme-color" content="#1f2937">';
+}
+add_action('wp_head', 'sudecka_wataha_render_favicons', 2);
+
+/**
  * Link „Udostępnij” do miejsca w Mapach Google (np. maps.app.goo.gl).
  */
 function sudecka_wataha_maps_place_url(): string
@@ -333,6 +359,7 @@ function sudecka_wataha_render_primary_nav(): void
         ['slug' => 'licencja-sportowa', 'label' => __('Licencja sportowa', 'sudecka-wataha')],
         ['slug' => 'pozwolenie-na-bron', 'label' => __('Pozwolenie na broń', 'sudecka-wataha')],
     ];
+    $strzelnica_url = 'https://strzelnicasudecka.pl/';
     ?>
     <div class="sw-nav__inner max-w-7xl mx-auto flex items-center justify-between gap-4 px-4 lg:px-8 py-3 min-h-[3.5rem]">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="sw-nav__brand shrink-0 no-underline group">
@@ -371,6 +398,9 @@ function sudecka_wataha_render_primary_nav(): void
             <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="<?php echo esc_attr(sudecka_wataha_nav_link_class($is_kontakt)); ?>">
                 <?php esc_html_e('Kontakt', 'sudecka-wataha'); ?>
             </a>
+            <a href="<?php echo esc_url($strzelnica_url); ?>" class="sw-nav-link sw-nav-link--cta" target="_blank" rel="noopener noreferrer">
+                <?php esc_html_e('Strzelnica', 'sudecka-wataha'); ?>
+            </a>
         </div>
 
         <button type="button" class="mobile-nav-toggle lg:hidden" aria-expanded="false" aria-controls="sw-mobile-nav">
@@ -393,6 +423,7 @@ function sudecka_wataha_render_primary_nav(): void
             </details>
 
             <a href="<?php echo esc_url(home_url('/kontakt/')); ?>" class="mobile-nav-panel__link<?php echo $is_kontakt ? ' mobile-nav-panel__link--active' : ''; ?>"><?php esc_html_e('Kontakt', 'sudecka-wataha'); ?></a>
+            <a href="<?php echo esc_url($strzelnica_url); ?>" class="mobile-nav-panel__link mobile-nav-panel__link--cta" target="_blank" rel="noopener noreferrer"><?php esc_html_e('Strzelnica', 'sudecka-wataha'); ?></a>
         </div>
     </div>
     <?php

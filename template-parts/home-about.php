@@ -27,7 +27,7 @@ if (! defined('ABSPATH')) {
                     <?php esc_html_e('Strzelectwo wzmacnia koncentrację, kondycję i poczucie bezpieczeństwa; regularne treningi i starty uczą dyscypliny, z której korzystasz także poza strzelnicą.', 'sudecka-wataha'); ?>
                 </p>
                 <p class="home-about__p">
-                    <?php esc_html_e('Organizujemy spotkania, szkolenia i zawody - to także miejsce, by poznać ludzi z podobnym zainteresowaniem. Wataha jest otwarta: wiek i płć nie grają roli, liczą się niekaralność i dobre chęci.', 'sudecka-wataha'); ?>
+                    <?php esc_html_e('Organizujemy spotkania, szkolenia i zawody - to także miejsce, by poznać ludzi z podobnym zainteresowaniem. Wataha jest otwarta: wiek i płeć nie grają roli, liczą się niekaralność i dobre chęci.', 'sudecka-wataha'); ?>
                 </p>
                 <ul class="home-about__highlights" role="list">
                     <li><?php esc_html_e('Trening strzelecki i procedury bezpieczeństwa pod okiem doświadczonych osób z klubu.', 'sudecka-wataha'); ?></li>

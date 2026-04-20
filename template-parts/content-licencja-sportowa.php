@@ -33,7 +33,7 @@ $dzss_kalendarz = 'https://www.dzss.pl/kalendarzdzss';
         <h3><?php esc_html_e('Procedura - pierwsza licencja', 'sudecka-wataha'); ?></h3>
         <ol>
             <li><?php esc_html_e('Zaloguj się na swój profil zawodnika w systemie informatycznym PZSS oraz w zakładce „Wnioski – licencje zawodnicze” wybierz wniosek o nową licencję.', 'sudecka-wataha'); ?></li>
-            <li><?php esc_html_e('Po wypełnieniu i wysłaniu wniosku, wykonaj przelew na ok. 50 zł na konto Klubu tytułem: „[imię i nazwisko] licencja zawodnicza 2023”.', 'sudecka-wataha'); ?></li>
+            <li><?php esc_html_e('Po wypełnieniu i wysłaniu wniosku, wykonaj przelew na ok. 70 zł na konto Klubu tytułem: „[imię i nazwisko] licencja zawodnicza 2026”.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Wyślij e-mail na adres Klubu (sudeckawataha@gmail.com) z informacją o wysłanym wniosku o nadanie licencji zawodniczej.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Po zaksięgowaniu Twojego przelewu, Klub zatwierdzi Twój wniosek. Następnie wniosek zostanie zatwierdzony przez DZSS po zaksięgowaniu przelewu na konto DZSS.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Po akceptacji DZSS, PZSS nada Twoją licencję w przeciągu 30 dni. Po nadaniu będzie ona dostępna do pobrania w systemie informatycznym w zakładce „Licencje i patenty”.', 'sudecka-wataha'); ?></li>
@@ -63,8 +63,8 @@ $dzss_kalendarz = 'https://www.dzss.pl/kalendarzdzss';
 
         <h3><?php esc_html_e('Procedura - przedłużenie', 'sudecka-wataha'); ?></h3>
         <ol>
-            <li><?php esc_html_e('Wyślij e-mail z uzupełnioną tabelę swoich startów na dany rok kalendarzowy na adres Klubu (sudeckawataha@gmail.com);', 'sudecka-wataha'); ?></li>
-            <li><?php esc_html_e('Wyślij przelewem ok. 50 zł na konto Klubu tytułem: „[imię i nazwisko] przedłużenie licencji zawodniczej na rok 2024”.', 'sudecka-wataha'); ?></li>
+            <li><?php esc_html_e('Wyślij e-mail z uzupełnioną tabelą swoich startów na dany rok kalendarzowy na adres Klubu (sudeckawataha@gmail.com);', 'sudecka-wataha'); ?></li>
+            <li><?php esc_html_e('Wyślij przelewem ok. 70 zł na konto Klubu tytułem: „[imię i nazwisko] przedłużenie licencji zawodniczej na rok 2026”.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Wypełnij wniosek o przedłużenie licencji w systemie informatycznym PZSS.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Po weryfikacji Twoich startów oraz zaksięgowaniu opłaty za licencję zawodniczą Klub zaakceptuje Twój wniosek, który następnie trafi do akceptacji przez DZSS.', 'sudecka-wataha'); ?></li>
             <li><?php esc_html_e('Po akceptacji wniosku przez DZSS, PZSS przedłuży Twoją licencję w ciągu 30 dni. Po przedłużeniu licencji przez PZSS, będzie ona dostępna do pobrania w zakładce „Licencje i patenty”.', 'sudecka-wataha'); ?></li>

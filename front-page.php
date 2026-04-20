@@ -18,7 +18,7 @@ get_header();
             decoding="async"
         >
         <div class="hero__content text-center px-4">
-            <p class="hero__kicker reveal active"><?php esc_html_e('Strzelecki Klub Sportowy', 'sudecka-wataha'); ?></p>
+            <p class="hero__kicker reveal active"><?php esc_html_e('Stowarzyszenie Strzelecki Klub Sportowy', 'sudecka-wataha'); ?></p>
             <h1 class="hero__title font-serif reveal"><?php esc_html_e('SUDECKA WATAHA', 'sudecka-wataha'); ?></h1>
             <p class="hero__quote reveal">
                 <?php esc_html_e('„Siłą wilka jest wataha, siłą watahy jest wilk…”', 'sudecka-wataha'); ?>

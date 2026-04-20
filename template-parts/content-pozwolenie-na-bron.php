@@ -6,6 +6,7 @@ if (! defined('ABSPATH')) {
 $fia_info = 'https://www.fia.com.pl/';
 $nts_przepisy = 'http://www.towarzystwostrzeleckie.org/przepisy-formalno-prawne/';
 $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kolekcjonerskie/';
+$patent_exercises_url = 'https://patentstrzelecki.eu/cwiczenia';
 ?>
 <article class="sw-article sw-article--about prose-page page-inner">
     <header class="sw-page-head">
@@ -24,7 +25,7 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
     </header>
 
     <section class="sw-section sw-section--roadmap" id="roadmapa-pozwolenie">
-        <h2><?php esc_html_e('Roadmapa: krok po kroku', 'sudecka-wataha'); ?></h2>
+        <h2><?php esc_html_e('Krok po kroku', 'sudecka-wataha'); ?></h2>
         <p><?php esc_html_e('Dwie ścieżki prowadzą do pozwolenia na broń. Tam, gdzie się pokrywają - widzisz wspólny krok.', 'sudecka-wataha'); ?></p>
 
         <div class="sw-timeline is-path-sport" data-timeline>
@@ -59,7 +60,7 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
                     <article class="sw-timeline__card sw-timeline__card--sport" data-path="sport">
                         <span class="sw-timeline__card-label"><?php esc_html_e('Sportowe', 'sudecka-wataha'); ?></span>
                         <h4><?php esc_html_e('Zdaj egzamin na patent PZSS', 'sudecka-wataha'); ?></h4>
-                        <p><?php esc_html_e('teoria + praktyka (400 zł) · min. 3 mies. stażu', 'sudecka-wataha'); ?></p>
+                        <p><?php esc_html_e('teoria + praktyka (400 zł) · min. mies. stażu', 'sudecka-wataha'); ?></p>
                     </article>
                     <span class="sw-timeline__node" aria-hidden="true"><span class="sw-timeline__badge">02</span></span>
                     <article class="sw-timeline__card sw-timeline__card--kolekcja" data-path="kolekcja">
@@ -73,7 +74,7 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
                     <article class="sw-timeline__card sw-timeline__card--sport" data-path="sport">
                         <span class="sw-timeline__card-label"><?php esc_html_e('Tylko sportowe', 'sudecka-wataha'); ?></span>
                         <h4><?php esc_html_e('Wystąp o licencję PZSS', 'sudecka-wataha'); ?></h4>
-                        <p><?php esc_html_e('formalność klubowa · ok. 50 zł', 'sudecka-wataha'); ?></p>
+                        <p><?php esc_html_e('formalność klubowa · ok. 70 zł', 'sudecka-wataha'); ?></p>
                     </article>
                     <span class="sw-timeline__node" aria-hidden="true"><span class="sw-timeline__badge">03</span></span>
                     <span class="sw-timeline__void" aria-hidden="true"></span>
@@ -179,7 +180,7 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
                 <ul>
                     <li><?php esc_html_e('Czas: zwykle ok. 6–8 miesięcy', 'sudecka-wataha'); ?></li>
                     <li><?php esc_html_e('Egzamin: patent PZSS (zamiast egzaminu WPA)', 'sudecka-wataha'); ?></li>
-                    <li><?php esc_html_e('Koszty kluczowe: badanie lekarskie 200–300 zł, licencja zawodnicza ok. 50 zł, badania lek. i psych. 500–700 zł, opłata WPA 242 zł, promesa 17 zł / szt.', 'sudecka-wataha'); ?></li>
+                    <li><?php esc_html_e('Koszty kluczowe: badanie lekarskie 200–300 zł, licencja zawodnicza ok. 70 zł, badania lek. i psych. 500–700 zł, opłata WPA 242 zł, promesa 17 zł / szt.', 'sudecka-wataha'); ?></li>
                 </ul>
             </article>
             <article class="sw-roadmap-summary__card sw-roadmap-summary__card--kolekcja">
@@ -286,6 +287,11 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
                     <p><?php esc_html_e('a) Część teoretyczna będzie obejmować sprawdzenie wiedzy z zakresu przepisów takich jak: Ustawa o broni i amunicji; Rozporządzenie dotyczące przechowywania i transportu broni; przepisy Kodeksu Karnego dotyczące broni palnej; przepisy dotyczące dyscyplin sportowych PZSS; zasad bezpieczeństwa; budowy i zasady działania broni.', 'sudecka-wataha'); ?></p>
                     <p><?php esc_html_e('b) Część praktyczna będzie obejmować sprawdzenie umiejętności z zakresu bezpieczeństwa i posługiwania się bronią palną.', 'sudecka-wataha'); ?></p>
                     <p class="sw-muted"><?php esc_html_e('Uwaga: aktualne wymogi stażu i procedury PZSS mogą się różnić - na stronie „Patent strzelecki" zamieszczono bieżącą procedurę zgodną z wytycznymi związku.', 'sudecka-wataha'); ?></p>
+                    <p>
+                        <a href="<?php echo esc_url($patent_exercises_url); ?>" class="sw-cta-link sw-cta-link--danger" target="_blank" rel="noopener noreferrer">
+                            <?php esc_html_e('Przejdź do ćwiczeń online', 'sudecka-wataha'); ?>
+                        </a>
+                    </p>
                 </div>
             </details>
 
@@ -295,7 +301,7 @@ $nts_egzamin = 'http://www.towarzystwostrzeleckie.org/egzamin-na-pozwolenie-kole
                     <span class="sw-accordion__title"><?php esc_html_e('Licencja zawodnicza', 'sudecka-wataha'); ?></span>
                 </summary>
                 <div class="sw-accordion__body">
-                    <p><?php esc_html_e('Następnym krokiem jest pozyskanie licencji strzeleckiej, w czym chętnie Ci pomożemy. Musisz jedynie przesłać do nas kopię swojego patentu strzeleckiego, dwa podpisane zdjęcia oraz uiścić na konto PZSS opłatę za wydanie licencji w wysokości ok. 50 zł. Należy pamiętać, iż licencja wydawana jest na dany rok kalendarzowy i aby móc ubiegać się o jej odnowienie należy wziąć udział przynajmniej w 8 zawodach w roku poprzednim (4 starty w dyscyplinie wiodącej oraz po 2 starty w dyscyplinach uzupełniających). Dokument powinieneś otrzymać po kilku tygodniach.', 'sudecka-wataha'); ?></p>
+                    <p><?php esc_html_e('Następnym krokiem jest pozyskanie licencji strzeleckiej, w czym chętnie Ci pomożemy. Musisz jedynie przesłać do nas kopię swojego patentu strzeleckiego, dwa podpisane zdjęcia oraz uiścić na konto PZSS opłatę za wydanie licencji w wysokości ok. 70 zł. Należy pamiętać, iż licencja wydawana jest na dany rok kalendarzowy i aby móc ubiegać się o jej odnowienie należy wziąć udział przynajmniej w 8 zawodach w roku poprzednim (4 starty w dyscyplinie wiodącej oraz po 2 starty w dyscyplinach uzupełniających). Dokument powinieneś otrzymać po kilku tygodniach.', 'sudecka-wataha'); ?></p>
                 </div>
             </details>
 
