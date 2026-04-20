@@ -27,6 +27,7 @@ if (! defined('ABSPATH')) {
         <a href="<?php echo esc_url(home_url('/o-nas/')); ?>"><?php esc_html_e('O nas', 'sudecka-wataha'); ?></a>
         <a href="<?php echo esc_url(home_url('/kontakt/')); ?>"><?php esc_html_e('Kontakt', 'sudecka-wataha'); ?></a>
     </div>
+    <p style="font-size:9px;color:rgba(255,255,255,0.12);letter-spacing:0.05em;margin-top:1.5rem;">v1.1</p>
 </footer>
 <?php wp_footer(); ?>
 </body>
